@@ -2,10 +2,6 @@
 This ruby script converts the CSV file from Bank Central Asia (BCA) to a file able to be imported by You Need a Budget (YNAB) app.
 Created by sarahsau (itsme@sarahsausan.com) in 2020; Forked from wesmcouch (wesmcouch@gmail.com).
 
-
-<<<<<<< Updated upstream
-Run the script using: 
-=======
 ## Download the BCA e-statement and put it in the script directory
 1. Login to klikBCA
 2. Go to Account Information > Account Statement
@@ -32,7 +28,7 @@ By default the file name is *converterResult*. It will be written in the directo
 <year_of_the_statement> is the year the transactions occured.
 
 Example:
->>>>>>> Stashed changes
+
 ```
 ynab_BCA_converter.rb JOHNDOE19062024.csv result.csv 2020
 ```
