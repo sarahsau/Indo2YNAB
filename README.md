@@ -17,13 +17,13 @@ If you haven't gotten Ruby installed, please do so.
 
 ## In your console, navigate to the script directory , then run the following command
 ```
- ynab_BCA_converter.rb <[statement_from_klikBCA].csv> <[converted_file_name].csv> <year_of_the_statement>
+ ynab_BCA_converter.rb [statement_from_klikBCA].csv [converted_file_name].csv year_of_the_statement
 ```
 [statement_from_klikBCA] is the file name of the statement you downloaded from klikBCA.
 Put it in the directory you're in for simpler access.
 
 [converted_file_name] is the file name for the conversion result.
-By default the file name is *converterResult*. It will be written in the directory you're in.
+By default the file name is *converted_result.csv*. It will be written in the directory you're in.
 
 <year_of_the_statement> is the year the transactions occured.
 
