@@ -1,7 +1,7 @@
 # BCA Transactions CSV to YNAB Converter.
-# Created by sarahsau (itsme@sarahsausan.com) in 2015; Forked from wesmcouch (wesmcouch@gmail.com).
-# run the script using ynabconverter.rb <exportedTransactions.csv> <FilenameToExport> <statement year>.
-# When you import to YNAB, select DD/MM/YYYY as the date format.
+# Created by sarahsau (itsme@sarahsausan.com) in 2020; Forked from wesmcouch (wesmcouch@gmail.com).
+# run the script using ynab_BCA_converter.rb <exportedTransactions.csv> <FilenameToExport> <statement year>.
+# Import to YNAB using DD/MM/YYYY as the date format.
 
 require 'csv'
 file_name = ARGV[0]
