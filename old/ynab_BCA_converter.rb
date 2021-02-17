@@ -1,17 +1,19 @@
-# BCA Transactions CSV to YNAB Converter.
-# Created by sarahsau (itsme@sarahsausan.com) in 2020; Forked from wesmcouch (wesmcouch@gmail.com).
-# run the script using ynab_BCA_converter.rb <exportedTransactions.csv> <FilenameToExport> <statement year>.
-# Import to YNAB using DD/MM/YYYY as the date format.
+# BCA Transactions CSV to YNAB Converter
 
 require 'csv'
+
+# arguments for script run
+
 file_name = ARGV[0]
 
-new_file_name = ARGV[1]
+statement_year = ARGV[1].to_s
+
+new_file_name = ARGV[2]
 if new_file_name.to_s == ''
-	new_file_name = "converted_result.csv"
+	new_file_name = "bca_result.csv"
 end
 
-statement_year = ARGV[2].to_s
+
 
 CSV.open(new_file_name, "wb") do |csv|
 	csv << ["Date", "Payee", "Memo", "Amount"]
@@ -79,5 +81,5 @@ CSV.foreach(file_name, skip_lines:/Balance/, skip_blanks: true) do |row|
 	end
 
 	# Show result in the console.
-	puts row.inspect
+	p row
 end
