@@ -56,7 +56,16 @@ class BcaIndoYnab
 			row[2] = row[1]
 			row[1] = ""
 
-			# Assign common payees.
+
+		# Insert results to the new file.
+			CSV.open(self.output, "a+") do |csv|
+				csv << row
+			end
+		end
+	end
+
+	def common_payee
+		CSV.foreach(self.output, 'rb+', skip_blanks: true) do |row|
 			memo_column = row[2].to_s
 			payee_column = row[1].to_s
 
@@ -76,18 +85,16 @@ class BcaIndoYnab
 				payee_column << "BCA"
 			end
 
-		# Insert results to the new file.
-			CSV.open(self.output, "a+") do |csv|
-				csv << row
-			end
-
-			# Show result in the console.
 			p row
 		end
 	end
 end
 
+
+
+# BCA2YNAB conversion
 bca = BcaIndoYnab.new(ARGV[0], ARGV[1], ARGV[2])
 
 bca.output_file
 bca.bca_processing
+bca.common_payee
