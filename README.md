@@ -1,10 +1,13 @@
-# BCA to YNAB converter v2.0
-This ruby script converts the CSV file from Indonesian banks to a file able to be imported by You Need a Budget (YNAB) app. Currently supporting:
+# Indo2YNAB converter v2.0
+This Ruby program converts bank statements from Indonesian banks into YNAB-ready CSV file. 
+
+Currently supporting:
 - Bank Central Asia (BCA)
 - Bank Negara Indonesia (BNI)
 
 ## 1. Install Ruby version 2.6.0 or newer
-Follow instructions in https://www.ruby-lang.org/en/downloads/. Make sure Ruby is properly installed by sending `ruby -v`in your terminal - it should returns the installed version of Ruby.
+Follow instructions in https://www.ruby-lang.org/en/downloads/. 
+Make sure Ruby is properly installed by sending `ruby -v`in your terminal - it should returns the installed version of Ruby.
 
 ## 2. Download this script, then put your bank statements in the same folder.
  See [statement download instructions](#statement-download-instructions) below.
