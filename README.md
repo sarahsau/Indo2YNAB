@@ -1,4 +1,4 @@
-# Indo2YNAB converter v0.2
+# IndoYNAB converter v0.2
 This Ruby program converts bank statements from Indonesian banks into YNAB-ready CSV file. 
 
 Currently supporting:
